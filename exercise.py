@@ -81,14 +81,21 @@ def check_voting_eligibility():
     # Your control flow logic goes here
 
     # Ask for the users age
-    age_input = print(input("Please provide your age"))
-    # Check if the input is a number
-    print(type(age_input))
-    if int(age_input):
-        print("This is a number")
+    age_input = input("Please provide your age ")
+    # Error handling if the input isnt a valid number
+    age = int(age_input)
+    while not age:
+        print("Your selection isnt valid")
+        # give them another attempt
+        age_input = input("Please provide your age ")
+    # If the input is a number
+
+    if age >= 18:
+        print(f"This person is {age}, which makes them eligible to vote.")
+    elif 0 < age < 18:
+        print("This person needs to wait until they are at least 18 years old.")
     else:
-        print("This isnt a number")
-    # Chec if the valid number is above -1
+        print("This person hasn't been born yet.")
 
     # if this input age is valid print a message stating so
 
