@@ -42,9 +42,16 @@ def check_letter():
     vowels = [ "A", "E", "I", "O", "U" , "a", "e", "i", "o", "u" ]
 
     # ask the user for their letter
-    letter = input("Select your letter!")
-
-    # check whether the letter is a voewl or not
+    letter = input("Select your letter! ")
+    
+    # Check whether the input contains a letter or not
+    if letter.isalpha():
+        print("Input confirmed!")
+    elif letter.isalnum():
+        print("No numbers allowed")
+    else:
+        print("Please provide a value")
+    # check whether the letter is a vowel or not
     if letter in vowels:
     # print if the value is a consonant or vowel 
         print(f"{letter} is a vowel")
