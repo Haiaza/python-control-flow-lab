@@ -137,11 +137,10 @@ def calculate_dog_years():
     if dog_age <= 2:
         human_years = dog_age * 10
     # if age > 2 *math for first n years
-    if dog_age > 2:
-        for num in dog_age:
-            
-
+    else:
+        human_years = 20 + (dog_age - 2) * 7
     # return the pets age in dog years
+    print(f"The dog's age in dog years is {human_years}.")
 
 # Call the function
 calculate_dog_years()
