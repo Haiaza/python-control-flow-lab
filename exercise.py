@@ -124,5 +124,24 @@ check_voting_eligibility()
 def calculate_dog_years():
     # Your control flow logic goes here
 
+    # input a dogs age
+    while True:
+        original_age = (input("How old is your dog? "))
+        #check the number
+        if original_age.isdigit():
+            dog_age = int(original_age)
+            break
+        else:
+            print("Please input a number")
+    # if age <= 2 *math for n years
+    if dog_age <= 2:
+        human_years = dog_age * 10
+    # if age > 2 *math for first n years
+    if dog_age > 2:
+        for num in dog_age:
+            
+
+    # return the pets age in dog years
+
 # Call the function
 calculate_dog_years()
