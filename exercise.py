@@ -232,6 +232,18 @@ def determine_season():
         # end the loop since everything is still truthy.
         break
     
+    # Determine the season
+    month_index = months.index(user_month) + 1  
+    if (month_index == 12 and day >= 21) or (month_index <= 3 and (month_index != 3 or day <= 19)):
+        season = "Winter"x
+    elif (month_index == 3 and day >= 20) or (month_index < 6) or (month_index == 6 and day <= 20):
+        season = "Spring"
+    elif (month_index == 6 and day >= 21) or (month_index < 9) or (month_index == 9 and day <= 21):
+        season = "Summer"
+    elif (month_index == 9 and day >= 22) or (month_index < 12) or (month_index == 12 and day <= 20):
+        season = "Fall"
 
+
+    print(f"{user_month} {day} is in {season}.")
 # Call the function
 determine_season()
